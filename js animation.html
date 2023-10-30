@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      A simple javascript animation
+    </title>
+    <script type="text/javascript">
+      var imgobj = null;
+
+      function init() {
+         imgobj = document.getElementById('myimage');
+          imgobj.style.position = 'relative';
+          imgobj.style.left = '0px';
+      }
+
+      function moveRight() {
+        imgobj.style.left = parseInt(imgobj.style.left) + 10 + 'px'
+      }
+      function moveBack() {
+        imgobj.style.left = '0px'
+      }
+      window.onload = init;
+    </script>
+  </head>
+
+  <body>
+     <form>
+      <img id="myimage" src="1.jpg" style="width: 300px; height: 300px; border-radius: 50px;"/>
+      <p> Click the button to move the image to the right</p>
+      <input type="button" value="click here" onclick="moveRight()" style="border-radius: 20px; margin: 10px; border: none; ">
+      <input type="button" value="move back" onclick="moveBack()" style="border-radius: 20px; margin: 10px; border: none;">
+     </form>
+  </body>
+</html>
